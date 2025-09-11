@@ -1,0 +1,121 @@
+/* General Page Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #1e1e2f;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.upload-box {
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-btn {
+  display: inline-block;
+  background: #4cafef;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.upload-btn:hover {
+  background: #3a8ad9;
+}
+
+.preview-box img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+  border: 2px solid #4cafef;
+  display: none;
+}
+
+/* Result Section as Grid */
+.result-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+/* Each prediction card in grid */
+.prediction-card {
+  background: #333;
+  border-radius: 10px;
+  padding: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.prediction-card:hover {
+  transform: translateY(-5px);
+  background: #4cafef;
+  color: #fff;
+}
+
+.prediction-card.top {
+  border: 2px solid #ffeb3b;
+  background: #4cafef;
+  color: #fff;
+}
+
+.prediction-name {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.prediction-prob {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.prediction-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: #555;
+  border-radius: 4px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.prediction-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: #ffb347;
+  border-radius: 4px;
+  transition: width 0.8s ease-in-out;
+}
