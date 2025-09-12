@@ -1,7 +1,6 @@
 /* General Page Styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea, #764ba2);
   color: #fff;
   margin: 0;
   padding: 0;
@@ -9,27 +8,32 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-image: url("D869_78_642_1200.jpg");
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(3px);
 }
 
 .container {
-  background: #1e1e2f;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 20px;
   text-align: center;
   width: 90%;
   max-width: 600px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
 }
 
 h1 {
   margin-bottom: 10px;
-  font-size: 26px;
+  font-size: clamp(22px, 4vw, 30px);
 }
 
 p {
   margin-bottom: 20px;
   color: #ccc;
-  font-size: 14px;
+  font-size: clamp(13px, 2.5vw, 16px);
 }
 
 .upload-box {
@@ -42,25 +46,27 @@ input[type="file"] {
 
 .upload-btn {
   display: inline-block;
-  background: #4cafef;
+  background: linear-gradient(135deg, #4cafef, #3a8ad9);
   color: white;
   padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .upload-btn:hover {
-  background: #3a8ad9;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(76, 175, 239, 0.6);
 }
 
 .preview-box img {
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-top: 15px;
-  border: 2px solid #4cafef;
+  border: 3px solid #4cafef;
   display: none;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.4);
 }
 
 /* Result Section as Grid */
@@ -73,29 +79,31 @@ input[type="file"] {
 
 /* Each prediction card in grid */
 .prediction-card {
-  background: #333;
-  border-radius: 10px;
-  padding: 12px;
+  background: #2c2c3e;
+  border-radius: 12px;
+  padding: 14px;
   position: relative;
   overflow: hidden;
-  transition: transform 0.2s, background 0.2s;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .prediction-card:hover {
-  transform: translateY(-5px);
-  background: #4cafef;
+  transform: translateY(-6px);
+  background: linear-gradient(135deg, #4cafef, #3a8ad9);
   color: #fff;
 }
 
 .prediction-card.top {
   border: 2px solid #ffeb3b;
-  background: #4cafef;
-  color: #fff;
+  background: linear-gradient(135deg, #ffd54f, #ffb300);
+  color: #222;
 }
 
 .prediction-name {
-  font-size: 16px;
+  font-size: clamp(14px, 2.5vw, 18px);
   margin-bottom: 6px;
+  font-weight: bold;
 }
 
 .prediction-prob {
@@ -106,7 +114,7 @@ input[type="file"] {
 .prediction-bar-bg {
   width: 100%;
   height: 8px;
-  background: #555;
+  background: #444;
   border-radius: 4px;
   margin-top: 8px;
   overflow: hidden;
@@ -115,7 +123,8 @@ input[type="file"] {
 .prediction-bar-fill {
   height: 100%;
   width: 0%;
-  background: #ffb347;
+  background: linear-gradient(90deg, #ff9800, #ff5722);
   border-radius: 4px;
   transition: width 0.8s ease-in-out;
+  box-shadow: 0px 0px 6px rgba(255, 152, 0, 0.7);
 }
