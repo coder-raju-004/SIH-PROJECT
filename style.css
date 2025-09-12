@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url("D869_78_642_1200.jpg");
+  background-image: url("./D869_78_642_1200.jpg");
   background-size: cover;
   background-position: center;
   backdrop-filter: blur(3px);
