@@ -17,7 +17,6 @@ async function predict(image) {
         const resultDiv = document.getElementById("result");
         resultDiv.innerHTML = "";
 
-        // find top prediction
         let top = prediction.reduce((prev, curr) =>
             curr.probability > prev.probability ? curr : prev, prediction[0]);
 
@@ -41,13 +40,11 @@ async function predict(image) {
 
             const barFill = document.createElement("div");
             barFill.classList.add("prediction-bar-fill");
-            // small delay for animation
             setTimeout(() => {
                 barFill.style.width = (p.probability * 100) + "%";
             }, 50);
 
             barBg.appendChild(barFill);
-
             card.appendChild(nameEl);
             card.appendChild(probEl);
             card.appendChild(barBg);
@@ -59,6 +56,8 @@ async function predict(image) {
     }
 }
 
+let uploadedImage = null;
+
 document.getElementById("imageUpload").addEventListener("change", (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -67,9 +66,18 @@ document.getElementById("imageUpload").addEventListener("change", (event) => {
             const img = document.getElementById("preview");
             img.src = e.target.result;
             img.style.display = "block";
-            img.onload = () => predict(img);
+            uploadedImage = img;
         };
         reader.readAsDataURL(file);
+    }
+});
+
+// Start Prediction Button
+document.getElementById("startBtn").addEventListener("click", () => {
+    if (uploadedImage) {
+        predict(uploadedImage);
+    } else {
+        alert("⚠️ Please upload an image first!");
     }
 });
 

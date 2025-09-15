@@ -7,7 +7,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+
+  <!-- 🔹 Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h2 class="logo">🐄 Breed Predictor</h2>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" style="margin-top:80px;">
     <h1>🐾 Cow & Buffalo Breed Predictor</h1>
     <p>Upload an image and let predict its category</p>
 
@@ -20,7 +31,26 @@
       <img id="preview" alt="Preview Image">
     </div>
 
+    <!-- Start Button -->
+    <button id="startBtn" class="upload-btn" style="margin-top:15px;">Start Prediction</button>
+
     <div id="result" class="result-grid"></div>
+  </div>
+
+  <!-- 🔹 About Section -->
+  <div id="about" class="extra-sections">
+    <div class="container">
+      <h2>📖 About</h2>
+      <p>
+        This project uses a Machine Learning model trained on cow and buffalo images 
+        to predict the breed from a photo. Powered by TensorFlow.js and Teachable Machine.
+        Cattle are bovine animals that are commonly used for meat, milk, and labor, while buffaloes are also bovine animals that are primarily used for meat and milk production. Cattle and buffalo are both members of the bovine family, but they have distinct differences in terms of their physical characteristics, behavior, and uses.
+
+Cattle are typically smaller than buffaloes, with shorter horns and a more docile temperament. They are used for a variety of purposes, including meat, dairy, and as draft animals. Buffalo, on the other hand, are larger, more muscular, and have longer, curved horns.
+
+They are primarily used for their meat and milk, and are known for their rich, flavorful meat and high-quality milk. Despite these differences, both cattle and buffalo are important sources of food and livelihood for many people around the world.
+      </p>
+    </div>
   </div>
 
   <!-- TensorFlow.js -->
