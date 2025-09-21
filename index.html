@@ -11,20 +11,23 @@
   <!-- 🔹 Navigation Bar -->
   <nav class="navbar">
     <div class="nav-container">
-      <h2 class="logo">🐄 Breed Predictor</h2>
+      <h2 class="logo" data-en="🐄 Breed Predictor" data-hi="🐄 नस्ल भविष्यवक्ता">🐄 Breed Predictor</h2>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
+        <li><a href="index.html" data-en="Home" data-hi="मुख्य पृष्ठ">Home</a></li>
+        <li><a href="about.html" data-en="About" data-hi="परिचय">About</a></li>
+        <li><a href="about.html" data-en="Contact" data-hi="संपर्क">Contact</a></li>
+        <li><button id="langToggle" class="lang-btn">🌐 हिंदी</button></li>
       </ul>
     </div>
   </nav>
 
   <div class="container" style="margin-top:80px;">
-    <h1>🐾 Cow & Buffalo Breed Predictor</h1>
-    <p>Upload an image and let predict its category</p>
+    <h1 data-en="🐾 Cow & Buffalo Breed Predictor" data-hi="🐾 गाय और भैंस नस्ल भविष्यवक्ता">🐾 Cow & Buffalo Breed Predictor</h1>
+    <p data-en="Upload an image and let predict its category" data-hi="एक चित्र अपलोड करें और इसकी श्रेणी का अनुमान लगाएँ">Upload an image and let predict its category</p>
 
     <div class="upload-box">
       <input type="file" id="imageUpload" accept="image/*">
-      <label for="imageUpload" class="upload-btn">Choose Image</label>
+      <label for="imageUpload" class="upload-btn" data-en="Choose Image" data-hi="चित्र चुनें">Choose Image</label>
     </div>
 
     <div class="preview-box">
@@ -32,25 +35,9 @@
     </div>
 
     <!-- Start Button -->
-    <button id="startBtn" class="upload-btn" style="margin-top:15px;">Start Prediction</button>
+    <button id="startBtn" class="upload-btn" style="margin-top:15px;" data-en="Start Prediction" data-hi="भविष्यवाणी शुरू करें">Start Prediction</button>
 
     <div id="result" class="result-grid"></div>
-  </div>
-
-  <!-- 🔹 About Section -->
-  <div id="about" class="extra-sections">
-    <div class="container">
-      <h2>📖 About</h2>
-      <p>
-        This project uses a Machine Learning model trained on cow and buffalo images 
-        to predict the breed from a photo. Powered by TensorFlow.js and Teachable Machine.
-        Cattle are bovine animals that are commonly used for meat, milk, and labor, while buffaloes are also bovine animals that are primarily used for meat and milk production. Cattle and buffalo are both members of the bovine family, but they have distinct differences in terms of their physical characteristics, behavior, and uses.
-
-Cattle are typically smaller than buffaloes, with shorter horns and a more docile temperament. They are used for a variety of purposes, including meat, dairy, and as draft animals. Buffalo, on the other hand, are larger, more muscular, and have longer, curved horns.
-
-They are primarily used for their meat and milk, and are known for their rich, flavorful meat and high-quality milk. Despite these differences, both cattle and buffalo are important sources of food and livelihood for many people around the world.
-      </p>
-    </div>
   </div>
 
   <!-- TensorFlow.js -->
@@ -59,5 +46,6 @@ They are primarily used for their meat and milk, and are known for their rich, f
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.4/dist/teachablemachine-image.min.js"></script>
   <!-- App Code -->
   <script src="app.js"></script>
+  <script src="lang.js"></script>
 </body>
 </html>
